@@ -1,9 +1,11 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const path = require('path');
+const generateMarkdown = require('./utils/generateMarkdown')
 const README = ({ projectTitle, briefDescription, installation, usage, credits,   }) =>
 
-  `# <${projectTitle}>
+  `# <${title}>
 
   ## Description
   
@@ -48,25 +50,58 @@ const README = ({ projectTitle, briefDescription, installation, usage, credits, 
   Go the extra mile and write tests for your application. Then provide examples on how to run them here.`;
 
 // TODO: Create an array of questions for user input
-const questions = [];
+const questions = [
+  {
+    type: "input",
+    name: "title",
+    message: "what's the title of the application"
+  },
+  {
+    type: "input",
+    name: "briefDescription",
+    message: "write a brief desciption"
+  },
+  {
+    type: "input",
+    name: "installation",
+    message: "what do you need to install for the application"
+  },
+  {
+    type: "input",
+    name: "usage",
+    message: "how do you use this application"
+  },
+  {
+    type: "input",
+    name: "credits",
+    message: "any collaborators"
+  },
+  {
+    type: "list",
+    name: "license",
+    message: "choose a license",
+    choices: ["MIT", "APACHE 2.0", "BSD 3", "NONE" ]
+  }
+];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
+  fs.writeFile(path.join(fileName), data, (err) =>
+  err ? console.error(err) : console.log('Success!')
+  );
     
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+  inquirer.prompt(questions)
+  .then((data) => {
+    console.log(data);
+    writeToFile("readme.md", generateMarkdown({...data}) )
+});
+}
 
 // Function call to initialize app
 init();
 
 
-.then((data) => {
-    console.log(data);
-    const myData = generateHTML(data)
-    fs.writeFile('index.html', myData, (err) =>
-    err ? console.error(err) : console.log('Success!')
-    );
-
-});
