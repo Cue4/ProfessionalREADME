@@ -27,7 +27,7 @@ function renderLicenseSection(license) {
   
   ## Badges
   
-  (https://img.shields.io/badge/license-${license.repalce(' ','_')}-green.svg)
+  (https://img.shields.io/badge/license-)
   
   ## Features
   
