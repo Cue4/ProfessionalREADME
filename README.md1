@@ -19,7 +19,17 @@ Install dependencies - inquirer
 ```bash
   npm install inquirer@8.2.4
 ```
-    
+## Usage
+
+
+## Credits
+
+Xpert Learning Assistant
+
+Rene Trevino - GitHub: neyneyalldayday
+
+Bootcamp: OSU GitLab Node Files
+
 ## License
 
 MIT License
