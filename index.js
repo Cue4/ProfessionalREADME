@@ -3,51 +3,51 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const path = require('path');
 const generateMarkdown = require('./utils/generateMarkdown')
-const README = ({ projectTitle, briefDescription, installation, usage, credits,   }) =>
+// const README = ({ projectTitle, briefDescription, installation, usage, credits, }) =>
 
-  `# <${title}>
+  // `# <${title}>
 
-  ## Description
+  // ## Description
   
-  <${briefDescription}>
+  // <${briefDescription}>
   
-  ## Installation
+  // ## Installation
   
-  <${installation}>
+  // <${installation}>
   
-  ## Usage
+  // ## Usage
   
-  <${usage}>
+  // <${usage}>
   
-  ## Credits
+  // ## Credits
   
-  <${credits}>
+  // <${credits}>
   
-  ## License
+  // ## License
   
-  <${license}>
+  // <${license}>
   
-  ---
+  // ---
   
-  🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
+  // 🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
   
-  ## Badges
+  // ## Badges
   
-  ![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
+  // ![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
   
-  Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
+  // Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
   
-  ## Features
+  // ## Features
   
-  If your project has a lot of features, list them here.
+  // If your project has a lot of features, list them here.
   
-  ## How to Contribute
+  // ## How to Contribute
   
-  If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
+  // If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
   
-  ## Tests
+  // ## Tests
   
-  Go the extra mile and write tests for your application. Then provide examples on how to run them here.`;
+  // Go the extra mile and write tests for your application. Then provide examples on how to run them here.`;
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -60,6 +60,11 @@ const questions = [
     type: "input",
     name: "briefDescription",
     message: "write a brief desciption"
+  },
+  {
+    type: "input",
+    name: "tableOfContents",
+    message: "list table of contents"
   },
   {
     type: "input",
