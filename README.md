@@ -23,6 +23,8 @@ Install dependencies - inquirer
 
 <iframe src="https://drive.google.com/file/d/1jOvh-Yo0RjC-kxpPJ7EaGOxujJAk_NxX/preview" width="640" height="480"></iframe>
 
+<iframe src="https://drive.google.com/file/d/1jOvh-Yo0RjC-kxpPJ7EaGOxujJAk_NxX/view" width="640" height="480"></iframe>
+
 ## Credits
 
 Xpert Learning Assistant
